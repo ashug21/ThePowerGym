@@ -33,7 +33,7 @@ export default function HeroSection() {
       <div className="hero-content container">
         <div className="hero-badge">
           <span className="hero-badge-dot" />
-          <span className="hero-badge-text">Established 2010 · New York City</span>
+          <span className="hero-badge-text">Established 2016 · Govindpuri Extension Kalkaji</span>
         </div>
 
         <h1 className="hero-title">
@@ -60,9 +60,9 @@ export default function HeroSection() {
 
       <div className="hero-stats">
         {[
-          { number: '15+', label: 'Years' },
+          { number: '5+', label: 'Years' },
           { number: '2K+', label: 'Members' },
-          { number: '40+', label: 'Trainers' },
+          { number: '40+', label: 'Clients' },
         ].map((stat) => (
           <div key={stat.label} className="hero-stat">
             <div className="hero-stat-number">{stat.number}</div>

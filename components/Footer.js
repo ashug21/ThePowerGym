@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import '../styles/footer.css';
+import Link from "next/link";
+import "../styles/footer.css";
 
 export default function Footer() {
   return (
@@ -8,21 +8,42 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div>
-            <div className="footer-brand-logo">IRON<span>FORGE</span></div>
+            <div className="footer-brand-logo">
+              The Power<span>Gym</span>
+            </div>
             <div className="footer-brand-tagline">Elite Fitness</div>
             <p className="footer-brand-desc">
-              Where champions are forged. Premium training environments, 
-              world-class coaching, and a community that pushes you beyond limits.
+              Where champions are forged. Premium training environments,
+              coaching from world class athlete, and a community that pushes you
+              beyond limits.
             </p>
             <div className="footer-social">
               {[
-                { icon: '𝕏', label: 'Twitter' },
-                { icon: 'in', label: 'Instagram' },
-                { icon: '▶', label: 'YouTube' },
-                { icon: 'f', label: 'Facebook' },
+                {
+                  icon: "/socialApps/instagram.png",
+                  label: "Instagram",
+                  link: "https://www.instagram.com/joshi_4567/",
+                },
+                {
+                  icon: "/socialApps/youtube.png",
+                  label: "YouTube",
+                  link: "https://www.youtube.com/@SandeepJoshi99",
+                },
+                {
+                  icon: "/socialApps/whatsapp.png",
+                  label: "Whatsapp",
+                  link: "https://wa.me/9990586994",
+                },
               ].map((s) => (
-                <a key={s.label} href="#" className="footer-social-link" aria-label={s.label}>
-                  {s.icon}
+                <a
+                  key={s.label}
+                  href={s.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-social-link"
+                  aria-label={s.label}
+                >
+                  <img src={s.icon} alt={s.label} />
                 </a>
               ))}
             </div>
@@ -33,10 +54,10 @@ export default function Footer() {
             <div className="footer-col-title">Navigate</div>
             <ul className="footer-links">
               {[
-                { href: '/', label: 'Home' },
-                { href: '/gallery', label: 'Gallery' },
-                { href: '/enquiry', label: 'Enquiry' },
-                { href: '/contact', label: 'Contact Us' },
+                { href: "/", label: "Home" },
+                { href: "/gallery", label: "Gallery" },
+                { href: "/enquiry", label: "Enquiry" },
+                { href: "/contact", label: "Contact Us" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href}>{l.label}</Link>
@@ -49,7 +70,13 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Programs</div>
             <ul className="footer-links">
-              {['Personal Training', 'Group Classes', 'Strength & Conditioning', 'Yoga & Recovery', 'Nutrition Coaching'].map((p) => (
+              {[
+                "Personal Training",
+                "Group Classes",
+                "Strength & Conditioning",
+                "Nutrition Coaching",
+                "Workout Guidance"
+              ].map((p) => (
                 <li key={p}>
                   <a href="#">{p}</a>
                 </li>
@@ -63,23 +90,25 @@ export default function Footer() {
             <div className="footer-contact-item">
               <div className="footer-contact-icon">📍</div>
               <div className="footer-contact-text">
-                14 Prestige Avenue, Suite 300<br />
-                New York, NY 10001
+              Sandeep Fitness Gym, 1675 E/2, Govindpuri Extension, Kalkaji, New Delhi, Delhi 110019
+                <br />
+
               </div>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon">📞</div>
-              <div className="footer-contact-text">+1 (800) IRONFORGE</div>
+              <div className="footer-contact-text">+91 9990586994</div>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon">✉</div>
-              <div className="footer-contact-text">elite@ironforge.com</div>
+              <div className="footer-contact-text">ashmeetsinghkalsi.dev@gmail.com</div>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon">🕐</div>
               <div className="footer-contact-text">
-                Mon–Fri: 5AM – 11PM<br />
-                Sat–Sun: 6AM – 10PM
+                Mon–Sat: 8AM – 11PM
+                <br />
+                Sun: Closed
               </div>
             </div>
           </div>
@@ -87,7 +116,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <div className="footer-bottom-text">
-            © 2024 IRONFORGE Elite Fitness. All rights reserved.
+            © 2026 The Power Gym. All rights reserved.
           </div>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>

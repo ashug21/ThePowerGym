@@ -1,24 +1,25 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import '../styles/forms.css';
+import { useState } from "react";
+import "../styles/forms.css";
 
 const hours = [
-  { day: 'Monday', time: '5:00 AM – 11:00 PM' },
-  { day: 'Tuesday', time: '5:00 AM – 11:00 PM' },
-  { day: 'Wednesday', time: '5:00 AM – 11:00 PM', today: true },
-  { day: 'Thursday', time: '5:00 AM – 11:00 PM' },
-  { day: 'Friday', time: '5:00 AM – 11:00 PM' },
-  { day: 'Saturday', time: '6:00 AM – 10:00 PM' },
-  { day: 'Sunday', time: '6:00 AM – 10:00 PM' },
+  { day: "Monday", time: "8:00 AM – 11:00 PM" },
+  { day: "Tuesday", time: "8:00 AM – 11:00 PM" },
+  { day: "Wednesday", time: "8:00 AM – 11:00 PM" },
+  { day: "Thursday", time: "8:00 AM – 11:00 PM" },
+  { day: "Friday", time: "8:00 AM – 11:00 PM" },
+  { day: "Saturday", time: "8:00 AM – 11:00 PM" },
+  { day: "Sunday", time: "Closed" },
 ];
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -37,44 +38,52 @@ export default function ContactClient() {
         <div className="contact-hero">
           <div className="section-label">Get In Touch</div>
           <h1 className="section-title">
-            CONTACT<br /><span>US</span>
+            CONTACT
+            <br />
+            <span>US</span>
           </h1>
           <p className="section-subtitle">
-            Questions, feedback, or ready to start? We&apos;re here for all of it.
+            Questions, feedback, or ready to start? We&apos;re here for all of
+            it.
           </p>
         </div>
 
         <div className="contact-grid">
-          {/* Left: Info */}
           <div className="contact-info">
             <div className="contact-info-block">
-              <div className="section-label" style={{ marginBottom: '8px' }}>Our Location</div>
+              <div className="section-label" style={{ marginBottom: "8px" }}>
+                Our Location
+              </div>
 
               {[
                 {
-                  icon: '📍',
-                  label: 'Address',
-                  value: '14 Prestige Avenue, Suite 300\nNew York, NY 10001',
-                  sub: 'Ground & 2nd floor',
+                  icon: "📍",
+                  label: "Address",
+                  value:
+                    "Sandeep Fitness Gym, 1675 E/2, Govindpuri Extension, Kalkaji, New Delhi, Delhi 110019",
+                  sub: "Ground floor",
                 },
                 {
-                  icon: '📞',
-                  label: 'Phone',
-                  value: '+1 (800) IRONFORGE',
-                  sub: 'Mon–Fri, 8AM–8PM EST',
+                  icon: "📞",
+                  label: "Phone",
+                  value: "+91 9990586994",
+                  sub: "Mon–Fri, 8AM–8PM EST",
                 },
                 {
-                  icon: '✉',
-                  label: 'Email',
-                  value: 'elite@ironforge.com',
-                  sub: 'Response within 24 hours',
+                  icon: "✉",
+                  label: "Email",
+                  value: "ashmeetsinghkalsi.dev@gmail.com",
+                  sub: "Response within 24 hours",
                 },
               ].map((item) => (
                 <div key={item.label} className="contact-info-item">
                   <div className="contact-info-icon">{item.icon}</div>
                   <div>
                     <div className="contact-info-label">{item.label}</div>
-                    <div className="contact-info-value" style={{ whiteSpace: 'pre-line' }}>
+                    <div
+                      className="contact-info-value"
+                      style={{ whiteSpace: "pre-line" }}
+                    >
                       {item.value}
                     </div>
                     <div className="contact-info-sub">{item.sub}</div>
@@ -83,43 +92,65 @@ export default function ContactClient() {
               ))}
             </div>
 
-            {/* Hours */}
             <div>
-              <div className="section-label" style={{ marginBottom: '16px' }}>Opening Hours</div>
+              <div className="section-label" style={{ marginBottom: "16px" }}>
+                Opening Hours
+              </div>
               <div className="hours-table">
                 {hours.map((h) => (
-                  <div key={h.day} className={`hours-row ${h.today ? 'today' : ''}`}>
-                    <span className="hours-day">{h.day}{h.today ? ' (Today)' : ''}</span>
+                  <div
+                    key={h.day}
+                    className={`hours-row ${h.today ? "today" : ""}`}
+                  >
+                    <span className="hours-day">
+                      {h.day}
+                      {h.today ? " (Today)" : ""}
+                    </span>
                     <span className="hours-time">{h.time}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Social */}
             <div>
               <div className="contact-social-title">Follow Us</div>
               <div className="contact-socials">
                 {[
-                  { icon: '𝕏', label: 'Twitter' },
-                  { icon: 'IG', label: 'Instagram' },
-                  { icon: '▶', label: 'YouTube' },
-                  { icon: 'in', label: 'LinkedIn' },
-                  { icon: 'f', label: 'Facebook' },
+                  {
+                    icon: "/socialApps/whatsapp.png",
+                    label: "Whatsapp",
+                    link: "https://wa.me/9990586994",
+                  },
+                  {
+                    icon: "/socialApps/instagram.png",
+                    label: "Instagram",
+                    link: "https://www.instagram.com/joshi_4567/",
+                  },
+                  {
+                    icon: "/socialApps/youtube.png",
+                    label: "YouTube",
+                    link: "https://www.youtube.com/@SandeepJoshi99",
+                  },
                 ].map((s) => (
-                  <a key={s.label} href="#" className="contact-social-link" aria-label={s.label}>
-                    {s.icon}
+                  <a
+                    key={s.label}
+                    href={s.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-social-link"
+                    aria-label={s.label}
+                  >
+                    <img src={s.icon} alt={s.label} />
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Map */}
             <div>
               <div className="contact-social-title">Find Us</div>
               <div className="contact-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9476519598053!2d-73.9882395!3d40.7484405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0xaca05ca48ab5e0e1!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.82210290116!2d77.18920111656189!3d28.53441768460988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce371e60fb6e9%3A0x6c137951116c72a4!2sSandeep%20Fitness%20Gym!5e0!3m2!1sen!2sin!4v1773337688385!5m2!1sen!2sin"
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -129,19 +160,38 @@ export default function ContactClient() {
             </div>
           </div>
 
-          {/* Right: Form */}
           <div className="contact-form-wrap">
             {submitted ? (
-              <div style={{ textAlign: 'center', padding: '60px 0' }}>
-                <div style={{ fontSize: '52px', marginBottom: '24px', color: 'var(--gold)' }}>✓</div>
-                <h2 className="contact-form-title" style={{ marginBottom: '16px' }}>Message Sent!</h2>
-                <p style={{ color: 'var(--white-dim)', lineHeight: '1.8', marginBottom: '32px' }}>
-                  Thank you for reaching out. Our team will get back to you within 24 hours.
+              <div style={{ textAlign: "center", padding: "60px 0" }}>
+                <div
+                  style={{
+                    fontSize: "52px",
+                    marginBottom: "24px",
+                    color: "var(--gold)",
+                  }}
+                >
+                  ✓
+                </div>
+                <h2
+                  className="contact-form-title"
+                  style={{ marginBottom: "16px" }}
+                >
+                  Message Sent!
+                </h2>
+                <p
+                  style={{
+                    color: "var(--white-dim)",
+                    lineHeight: "1.8",
+                    marginBottom: "32px",
+                  }}
+                >
+                  Thank you for reaching out. Our team will get back to you
+                  within 24 hours.
                 </p>
                 <button
                   className="btn-primary"
                   onClick={() => setSubmitted(false)}
-                  style={{ display: 'inline-flex' }}
+                  style={{ display: "inline-flex" }}
                 >
                   <span>Send Another</span>
                 </button>
@@ -182,6 +232,19 @@ export default function ContactClient() {
                   </div>
 
                   <div className="form-group">
+                    <label className="form-label">Phone *</label>
+                    <input
+                      className="form-input"
+                      type="tel"
+                      name="phone"
+                      placeholder="+91 9876543210"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
                     <label className="form-label">Subject</label>
                     <select
                       className="form-select"
@@ -208,7 +271,7 @@ export default function ContactClient() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      style={{ minHeight: '200px' }}
+                      style={{ minHeight: "200px" }}
                     />
                   </div>
 

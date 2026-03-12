@@ -16,7 +16,6 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <TrainersSection />
-        <MembershipSection />
         <TestimonialsSection />
         <CtaStrip />
       </main>

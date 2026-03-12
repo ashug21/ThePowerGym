@@ -4,11 +4,11 @@ const features = [
   {
     icon: '⚡',
     title: 'Elite Equipment',
-    desc: 'Over 500 premium machines and free weights. Every tool you need to push beyond your limits, always maintained to perfection.',
+    desc: 'Premium machines and free weights. Every tool you need to push beyond your limits, always maintained to perfection.',
   },
   {
     icon: '🏆',
-    title: 'World-Class Coaches',
+    title: 'Guidance from Mr. Universe Winner',
     desc: 'Train with certified professionals, Olympic athletes, and sports science experts who are obsessed with your results.',
   },
   {
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
             </h2>
           </div>
           <p className="features-intro">
-            Every detail of IRONFORGE is designed to help you perform at your absolute best. 
+            Every detail of The Power Gym is designed to help you perform at your absolute best. 
             From the equipment to the environment — nothing here is ordinary.
           </p>
         </div>

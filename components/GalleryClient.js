@@ -8,7 +8,7 @@ const galleryItems = [
   {
     id: 1,
     src: '/Gallery/img1.JPG',
-    category: 'Facility',
+    category: 'My Transformation',
     type : 'image',
     title: 'Main Training Floor',
     desc: 'Our 15,000 sq ft main floor, equipped with over 300 premium machines and free weights.',
@@ -16,7 +16,7 @@ const galleryItems = [
   {
     id: 2,
     src:'/Gallery/img2.JPG',
-    category: 'Training',
+    category: 'MyClients',
     type : 'image',
     title: 'Cardio Zone',
     desc: 'State-of-the-art cardio equipment with personal screens and climate control.',
@@ -32,7 +32,7 @@ const galleryItems = [
   {
     id: 4,
     src: '/Gallery/img4.JPG',
-    category: 'Training',
+    category: 'MyClients',
     type : 'image',
     title: 'Personal Training Studio',
     desc: 'Private studio spaces for one-on-one coaching sessions.',
@@ -40,7 +40,7 @@ const galleryItems = [
   {
     id: 5,
     src: '/Gallery/img5.JPG',
-    category: 'Facility',
+    category: 'MyClients',
     type : 'image',
     title: 'Weights Gallery',
     desc: 'Extensive free weights selection from 5lb to 150lb dumbbells.',
@@ -48,7 +48,7 @@ const galleryItems = [
   {
     id: 6,
     src: '/Gallery/img6.JPG',
-    category: 'Training',
+    category: 'MyClients',
     type : 'image',
     title: 'Functional Zone',
     desc: 'Dedicated functional training space with battle ropes, sleds, and turf.',
@@ -56,7 +56,7 @@ const galleryItems = [
   {
     id: 7,
     src: '/Gallery/img7.JPG',
-    category: 'Recovery',
+    category: 'MyClients',
     type : 'image',
     title: 'Recovery Suite',
     desc: 'Premium recovery including cold plunge pools and infrared sauna.',
@@ -72,7 +72,7 @@ const galleryItems = [
   {
     id: 9,
     src: '/Gallery/img9.JPG',
-    category: 'Training',
+    category: 'MyClients',
     type : 'image',
     title: 'Strength Lab',
     desc: 'Heavy compound movement area with squat racks and power cages.',
@@ -80,7 +80,7 @@ const galleryItems = [
   {
     id: 10,
     src: '/Gallery/img10.JPG',
-    category: 'Facility',
+    category: 'My Transformation',
     type : 'image',
     title: 'Luxury Locker Room',
     desc: 'Premium locker rooms with private suites and spa-quality amenities.',
@@ -88,7 +88,7 @@ const galleryItems = [
   {
     id: 11,
     src: '/Gallery/img11.JPG',
-    category: 'Training',
+    category: 'MyClients',
     type : 'image',
     title: 'Boxing Suite',
     desc: 'Professional boxing and martial arts training area.',
@@ -104,7 +104,7 @@ const galleryItems = [
   {
     id: 13,
     src: '/Gallery/img13.JPG',
-    category: 'Recovery',
+    category: 'MyClients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -112,7 +112,7 @@ const galleryItems = [
   {
     id: 14,
     src: '/Gallery/img14.JPG',
-    category: 'Recovery',
+    category: 'MyClients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -120,16 +120,117 @@ const galleryItems = [
   {
     id: 15,
     src: '/Gallery/img15.JPG',
+    category: 'MyClients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 16,
+    src: '/Gallery/img16.JPG',
+    category: 'MyClients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 17,
+    src: '/Gallery/img17.JPG',
+    category: 'MyClients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 18,
+    src: '/Gallery/img18.JPG',
+    category: 'MyClients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 19,
+    src: '/Gallery/img19.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 20,
+    src: '/Gallery/img20.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 21,
+    src: '/Gallery/img21.JPG',
+    category: 'Recovery',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 22,
+    src: '/Gallery/img22.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 23,
+    src: '/Gallery/img23.JPG',
+    category: 'Recovery',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 24,
+    src: '/Gallery/img24.JPG',
+    category: 'Recovery',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 25,
+    src: '/Gallery/img25.JPG',
+    category: 'Recovery',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 26,
+    src: '/Gallery/img26.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 27,
+    src: '/Gallery/img27.JPG',
     category: 'Recovery',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
 
+
   // videos below this
-  
+
   {
-    id: 16,
+    id: 101,
     src: '/Gallery/vid1.MP4',
     category: 'Recovery',
     type : 'video',
@@ -137,7 +238,7 @@ const galleryItems = [
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
   {
-    id: 17,
+    id: 102,
     src: '/Gallery/vid2.MP4',
     category: 'Recovery',
     type : 'video',
@@ -145,7 +246,7 @@ const galleryItems = [
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
   {
-    id: 18,
+    id: 103,
     src: '/Gallery/vid3.MP4',
     category: 'Recovery',
     type : 'video',
@@ -153,7 +254,7 @@ const galleryItems = [
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
   {
-    id: 19,
+    id: 104,
     src: '/Gallery/vid4.MP4',
     category: 'Recovery',
     type : 'video',
@@ -161,8 +262,56 @@ const galleryItems = [
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
   {
-    id: 20,
+    id: 105,
     src: '/Gallery/vid5.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 106,
+    src: '/Gallery/vid6.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 107,
+    src: '/Gallery/vid7.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 108,
+    src: '/Gallery/vid8.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 109,
+    src: '/Gallery/vid9.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 110,
+    src: '/Gallery/vid10.MP4',
+    category: 'Recovery',
+    type : 'video',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+  {
+    id: 111,
+    src: '/Gallery/vid11.MP4',
     category: 'Recovery',
     type : 'video',
     title: 'Stretch & Mobility Zone',
@@ -170,7 +319,7 @@ const galleryItems = [
   },
 ];
 
-const categories = ['All', 'Facility', 'Training', 'Images', 'Videos'];
+const categories = ['All', 'MyClients', 'My Transformation', 'Images', 'Videos'];
 
 export default function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -221,7 +370,7 @@ export default function GalleryClient() {
                 THE<br /><span>GALLERY</span>
               </h1>
               <p className="section-subtitle">
-                Every corner of IRONFORGE is designed to inspire performance and demand excellence.
+                Every corner of The Power Gym is designed to inspire performance and demand excellence.
               </p>
             </div>
             <div className="gallery-filter">

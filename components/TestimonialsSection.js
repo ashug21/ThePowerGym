@@ -3,19 +3,19 @@ import '../styles/home.css';
 
 const testimonials = [
   {
-    text: "IRONFORGE completely transformed my approach to fitness. The coaches are phenomenal and the facility is unlike anything I've experienced. Three years in and I'm still seeing results.",
+    text: "The Power Gym completely transformed my approach to fitness. The coaches are phenomenal and the facility is unlike anything I've experienced. Three years in and I'm still seeing results.",
     name: 'David Chen',
     detail: 'Apex Member · 3 Years',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
   },
   {
-    text: "As a competitive athlete, I need elite-level training. IRONFORGE delivered on every front — the programming, the recovery facilities, and the coaching have all taken my performance to new heights.",
+    text: "As a competitive athlete, I need elite-level training. The Power Gym delivered on every front — the programming, the recovery facilities, and the coaching have all taken my performance to new heights.",
     name: 'Priya Sharma',
     detail: 'Elite Member · 18 Months',
     avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80',
   },
   {
-    text: "I was skeptical about the price point, but IRONFORGE is absolutely worth every penny. The atmosphere pushes you to perform, the coaches genuinely care, and the results speak for themselves.",
+    text: "I was skeptical about the price point, but The Power Gym is absolutely worth every penny. The atmosphere pushes you to perform, the coaches genuinely care, and the results speak for themselves.",
     name: 'Michael Torres',
     detail: 'Elite Member · 2 Years',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
