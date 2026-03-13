@@ -53,7 +53,7 @@ export default function HeroSection() {
             <span>→</span>
           </Link>
           <Link href="/gallery" className="btn-secondary">
-            <span>View Facility</span>
+            <span>View Gallery</span>
           </Link>
         </div>
       </div>

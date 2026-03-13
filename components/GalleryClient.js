@@ -225,6 +225,168 @@ const galleryItems = [
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
   },
+  {
+    id: 28,
+    src: '/Gallery/img28.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 29,
+    src: '/Gallery/img29.JPG',
+    category: 'My Transformation',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+
+
+  {
+    id: 30,
+    src: '/Gallery/img30.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 31,
+    src: '/Gallery/img31.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 32,
+    src: '/Gallery/img32.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 33,
+    src: '/Gallery/img33.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 34,
+    src: '/Gallery/img34.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 35,
+    src: '/Gallery/img35.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 36,
+    src: '/Gallery/img36.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+  {
+    id: 37,
+    src: '/Gallery/img37.JPG',
+    category: 'My Clients',
+    type : 'image',
+    title: 'Stretch & Mobility Zone',
+    desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+  },
+
+
+// gym images below
+
+
+
+{
+  id: 51,
+  src: '/Gallery/gym/gimg1.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+
+{
+  id: 52,
+  src: '/Gallery/gym/gimg2.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+{
+  id: 53,
+  src: '/Gallery/gym/gimg3.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+{
+  id: 54,
+  src: '/Gallery/gym/gimg4.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+{
+  id: 55,
+  src: '/Gallery/gym/gimg5.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+{
+  id: 56,
+  src: '/Gallery/gym/gimg6.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
+
+{
+  id: 56,
+  src: '/Gallery/gym/gimg7.png',
+  category: 'Gym Images',
+  type : 'image',
+  title: 'Stretch & Mobility Zone',
+  desc: 'Dedicated stretching area with foam rollers and mobility tools.',
+},
+
 
 
   // videos below this
@@ -319,7 +481,7 @@ const galleryItems = [
   },
 ];
 
-const categories = ['All', 'My Clients', 'My Transformation', 'Images', 'Videos'];
+const categories = ['All', 'My Clients', 'My Transformation', 'Gym Images', 'Videos'];
 
 export default function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState('All');
