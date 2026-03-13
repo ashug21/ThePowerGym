@@ -16,7 +16,7 @@ const galleryItems = [
   {
     id: 2,
     src:'/Gallery/img2.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Cardio Zone',
     desc: 'State-of-the-art cardio equipment with personal screens and climate control.',
@@ -32,7 +32,7 @@ const galleryItems = [
   {
     id: 4,
     src: '/Gallery/img4.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Personal Training Studio',
     desc: 'Private studio spaces for one-on-one coaching sessions.',
@@ -40,7 +40,7 @@ const galleryItems = [
   {
     id: 5,
     src: '/Gallery/img5.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Weights Gallery',
     desc: 'Extensive free weights selection from 5lb to 150lb dumbbells.',
@@ -48,7 +48,7 @@ const galleryItems = [
   {
     id: 6,
     src: '/Gallery/img6.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Functional Zone',
     desc: 'Dedicated functional training space with battle ropes, sleds, and turf.',
@@ -56,7 +56,7 @@ const galleryItems = [
   {
     id: 7,
     src: '/Gallery/img7.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Recovery Suite',
     desc: 'Premium recovery including cold plunge pools and infrared sauna.',
@@ -72,7 +72,7 @@ const galleryItems = [
   {
     id: 9,
     src: '/Gallery/img9.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Strength Lab',
     desc: 'Heavy compound movement area with squat racks and power cages.',
@@ -88,7 +88,7 @@ const galleryItems = [
   {
     id: 11,
     src: '/Gallery/img11.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Boxing Suite',
     desc: 'Professional boxing and martial arts training area.',
@@ -104,7 +104,7 @@ const galleryItems = [
   {
     id: 13,
     src: '/Gallery/img13.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -112,7 +112,7 @@ const galleryItems = [
   {
     id: 14,
     src: '/Gallery/img14.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -120,7 +120,7 @@ const galleryItems = [
   {
     id: 15,
     src: '/Gallery/img15.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -129,7 +129,7 @@ const galleryItems = [
   {
     id: 16,
     src: '/Gallery/img16.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -138,7 +138,7 @@ const galleryItems = [
   {
     id: 17,
     src: '/Gallery/img17.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -147,7 +147,7 @@ const galleryItems = [
   {
     id: 18,
     src: '/Gallery/img18.JPG',
-    category: 'MyClients',
+    category: 'My Clients',
     type : 'image',
     title: 'Stretch & Mobility Zone',
     desc: 'Dedicated stretching area with foam rollers and mobility tools.',
@@ -319,7 +319,7 @@ const galleryItems = [
   },
 ];
 
-const categories = ['All', 'MyClients', 'My Transformation', 'Images', 'Videos'];
+const categories = ['All', 'My Clients', 'My Transformation', 'Images', 'Videos'];
 
 export default function GalleryClient() {
   const [activeCategory, setActiveCategory] = useState('All');

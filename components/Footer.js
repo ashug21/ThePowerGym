@@ -58,6 +58,7 @@ export default function Footer() {
                 { href: "/gallery", label: "Gallery" },
                 { href: "/enquiry", label: "Enquiry" },
                 { href: "/contact", label: "Contact Us" },
+                { href: "/admin", label: "Admin" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link href={l.href}>{l.label}</Link>
