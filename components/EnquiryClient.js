@@ -102,9 +102,8 @@ export default function EnquiryClient() {
             <h2 className="enquiry-form-title">Enquire Now</h2>
 
             <p className="enquiry-form-subtitle">
-              Fill in your details and we'll be in touch within 24 hours.
-            </p>
-
+  Fill in your details and we&apos;ll be in touch within 24 hours.
+</p>
             <form className="enquiry-form" onSubmit={handleEnquiry}>
 
               <div className="form-row">
