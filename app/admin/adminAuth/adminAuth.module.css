@@ -1,0 +1,327 @@
+/* =====================
+   TOKENS & RESET
+   ===================== */
+   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+   .wrapper {
+     --bg:          #080b10;
+     --surface:     #0e1219;
+     --border:      rgba(255, 255, 255, 0.07);
+     --border-focus: rgba(99, 200, 255, 0.5);
+     --text-primary: #f0f4f8;
+     --text-muted:  #5a6478;
+     --text-soft:   #8a96aa;
+     --accent:      #63c8ff;
+     --accent-dim:  rgba(99, 200, 255, 0.12);
+     --accent-glow: rgba(99, 200, 255, 0.25);
+     --danger:      #ff5f7e;
+     --input-bg:    #12171f;
+     --radius:      14px;
+     --radius-sm:   8px;
+   
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--bg);
+     padding: 1.5rem;
+     position: relative;
+     overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+   
+   /* =====================
+      BACKGROUND EFFECTS
+      ===================== */
+   .grid {
+     position: absolute;
+     inset: 0;
+     background-image:
+       linear-gradient(rgba(99, 200, 255, 0.03) 1px, transparent 1px),
+       linear-gradient(90deg, rgba(99, 200, 255, 0.03) 1px, transparent 1px);
+     background-size: 48px 48px;
+     pointer-events: none;
+   }
+   
+   .orb1 {
+     position: absolute;
+     width: 520px;
+     height: 520px;
+     border-radius: 50%;
+     background: radial-gradient(circle, rgba(99, 200, 255, 0.09) 0%, transparent 70%);
+     top: -160px;
+     right: -160px;
+     pointer-events: none;
+     animation: pulse 7s ease-in-out infinite;
+   }
+   
+   .orb2 {
+     position: absolute;
+     width: 380px;
+     height: 380px;
+     border-radius: 50%;
+     background: radial-gradient(circle, rgba(120, 80, 255, 0.08) 0%, transparent 70%);
+     bottom: -120px;
+     left: -120px;
+     pointer-events: none;
+     animation: pulse 9s ease-in-out infinite reverse;
+   }
+   
+   @keyframes pulse {
+     0%, 100% { transform: scale(1);   opacity: 1; }
+     50%       { transform: scale(1.1); opacity: 0.7; }
+   }
+   
+   /* =====================
+      CARD
+      ===================== */
+   .card {
+     position: relative;
+     z-index: 1;
+     width: 100%;
+     max-width: 420px;
+     background: var(--surface);
+     border: 1px solid var(--border);
+     border-radius: 20px;
+     padding: 2.5rem 2.5rem 2rem;
+     box-shadow:
+       0 0 0 1px rgba(255,255,255,0.03) inset,
+       0 32px 80px rgba(0,0,0,0.6),
+       0 0 60px rgba(99, 200, 255, 0.04);
+     animation: cardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+   }
+   
+   @keyframes cardIn {
+     from { opacity: 0; transform: translateY(28px) scale(0.97); }
+     to   { opacity: 1; transform: translateY(0)   scale(1); }
+   }
+   
+   /* =====================
+      HEADER
+      ===================== */
+   .header {
+     text-align: center;
+     margin-bottom: 2rem;
+   }
+   
+   .iconWrap {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 56px;
+     height: 56px;
+     border-radius: 16px;
+     background: var(--accent-dim);
+     border: 1px solid rgba(99, 200, 255, 0.2);
+     color: var(--accent);
+     margin-bottom: 1.1rem;
+     animation: cardIn 0.6s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+   }
+   
+   .title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+     font-size: 1.65rem;
+     font-weight: 800;
+     color: var(--text-primary);
+     margin: 0 0 0.35rem;
+     letter-spacing: -0.02em;
+   }
+   
+   .subtitle {
+     font-size: 0.82rem;
+     color: var(--text-muted);
+     margin: 0;
+     letter-spacing: 0.01em;
+   }
+   
+   /* =====================
+      FORM
+      ===================== */
+   .form {
+     display: flex;
+     flex-direction: column;
+     gap: 1.1rem;
+   }
+   
+   .field {
+     display: flex;
+     flex-direction: column;
+     gap: 0.45rem;
+   }
+   
+   .label {
+     font-size: 0.78rem;
+     font-weight: 500;
+     color: var(--text-soft);
+     letter-spacing: 0.06em;
+     text-transform: uppercase;
+   }
+   
+   .inputWrap {
+     position: relative;
+     display: flex;
+     align-items: center;
+   }
+   
+   .inputIcon {
+     position: absolute;
+     left: 14px;
+     color: var(--text-muted);
+     display: flex;
+     align-items: center;
+     pointer-events: none;
+     transition: color 0.2s;
+   }
+   
+   .input {
+     width: 100%;
+     background: var(--input-bg);
+     border: 1px solid var(--border);
+     border-radius: var(--radius-sm);
+     color: var(--text-primary);
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+     font-size: 0.92rem;
+     padding: 0.78rem 2.8rem 0.78rem 2.8rem;
+     outline: none;
+     transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+     caret-color: var(--accent);
+   }
+   
+   .input::placeholder {
+     color: var(--text-muted);
+     font-weight: 300;
+   }
+   
+   .input:focus {
+     border-color: var(--border-focus);
+     background: #141b24;
+     box-shadow: 0 0 0 3px var(--accent-glow);
+   }
+   
+   .input:focus + .inputIcon,
+   .inputWrap:focus-within .inputIcon {
+     color: var(--accent);
+   }
+   
+   /* Show/hide password button */
+   .toggleBtn {
+     position: absolute;
+     right: 12px;
+     background: none;
+     border: none;
+     cursor: pointer;
+     color: var(--text-muted);
+     display: flex;
+     align-items: center;
+     padding: 4px;
+     border-radius: 4px;
+     transition: color 0.2s;
+   }
+   
+   .toggleBtn:hover { color: var(--accent); }
+   
+   /* =====================
+      FORGOT PASSWORD
+      ===================== */
+   .forgotRow {
+     display: flex;
+     justify-content: flex-end;
+     margin-top: -0.2rem;
+   }
+   
+   .forgot {
+     font-size: 0.78rem;
+     color: var(--text-muted);
+     text-decoration: none;
+     transition: color 0.2s;
+   }
+   
+   .forgot:hover { color: var(--accent); }
+   
+   /* =====================
+      SUBMIT BUTTON
+      ===================== */
+   .submitBtn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.55rem;
+     width: 100%;
+     padding: 0.88rem 1.5rem;
+     margin-top: 0.4rem;
+     background: linear-gradient(135deg, #3ab8f5 0%, #1a8fd1 100%);
+     color: #fff;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+     font-size: 0.95rem;
+     font-weight: 700;
+     letter-spacing: 0.02em;
+     border: none;
+     border-radius: var(--radius-sm);
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+     transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
+     box-shadow: 0 4px 24px rgba(58, 184, 245, 0.3);
+   }
+   
+   .submitBtn::before {
+     content: '';
+     position: absolute;
+     inset: 0;
+     background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+     opacity: 0;
+     transition: opacity 0.2s;
+   }
+   
+   .submitBtn:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 8px 32px rgba(58, 184, 245, 0.45);
+     filter: brightness(1.08);
+   }
+   
+   .submitBtn:hover::before { opacity: 1; }
+   
+   .submitBtn:active {
+     transform: translateY(0);
+     filter: brightness(0.95);
+   }
+   
+   /* =====================
+      FOOTER
+      ===================== */
+   .footer {
+     text-align: center;
+     font-size: 0.72rem;
+     color: var(--text-muted);
+     margin: 1.5rem 0 0;
+     letter-spacing: 0.02em;
+   }
+   
+   /* =====================
+      RESPONSIVE
+      ===================== */
+   @media (max-width: 480px) {
+     .card {
+       padding: 2rem 1.5rem 1.6rem;
+       border-radius: 16px;
+     }
+   
+     .title {
+       font-size: 1.4rem;
+     }
+   
+     .iconWrap {
+       width: 48px;
+       height: 48px;
+       border-radius: 12px;
+     }
+   }
+   
+   @media (max-width: 360px) {
+     .card {
+       padding: 1.6rem 1.2rem 1.4rem;
+     }
+   }

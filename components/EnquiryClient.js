@@ -49,8 +49,6 @@ export default function EnquiryClient() {
   
       
     } catch (error) {
-      
-
       console.log(error);
     }
   }
@@ -151,11 +149,12 @@ export default function EnquiryClient() {
                 <select className="form-select" onChange={(e) => setPrimaryGoal(e.target.value)}
                   value={primarygoal} name="primary_goal">
                   <option value="">Select a goal</option>
-                  <option value="strength">Build Strength</option>
-                  <option value="fat-loss">Fat Loss</option>
-                  <option value="performance">Athletic Performance</option>
-                  <option value="wellness">General Wellness</option>
-                  <option value="body-comp">Body Composition</option>
+                  <option value="strength">Fat Loss Transformation</option>
+                  <option value="fat-loss">Muscle Gain Program</option>
+                  <option value="performance">Bodybuilding Competition Prep</option>
+                  <option value="wellness">Strength & Fitness Training</option>
+                  <option value="body-comp">Online Personal Coaching</option>
+                  <option value="body-comp">Custom Diet + Workout Plan</option>
                 </select>
               </div>
 

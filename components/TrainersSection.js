@@ -67,9 +67,23 @@ export default function TrainersSection() {
                   <div className="trainer-role">{trainer.role}</div>
 
                   <div className="trainer-socials">
-                    {["𝕏", "in", "▶"].map((icon) => (
-                      <a key={icon} href="#" className="trainer-social">
-                        {icon}
+                    {[
+                      {
+                        icon: "/socialApps/instagram.png",
+                        link: "https://www.instagram.com/joshi_4567/",
+                      },
+                      {
+                        icon: "/socialApps/youtube.png",
+                        link: "https://www.youtube.com/@SandeepJoshi99",
+                      },
+                    ].map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.link}
+                        className="trainer-social"
+                        target="_blank"
+                      >
+                        <img src={social.icon} alt="social" />
                       </a>
                     ))}
                   </div>

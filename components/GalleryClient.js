@@ -379,7 +379,7 @@ const galleryItems = [
 
 
 {
-  id: 56,
+  id: 57,
   src: '/Gallery/gym/gimg7.png',
   category: 'Gym Images',
   type : 'image',

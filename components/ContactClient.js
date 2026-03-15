@@ -4,12 +4,12 @@ import { useState } from "react";
 import "../styles/forms.css";
 
 const hours = [
-  { day: "Monday", time: "8:00 AM – 11:00 PM" },
-  { day: "Tuesday", time: "8:00 AM – 11:00 PM" },
-  { day: "Wednesday", time: "8:00 AM – 11:00 PM" },
-  { day: "Thursday", time: "8:00 AM – 11:00 PM" },
-  { day: "Friday", time: "8:00 AM – 11:00 PM" },
-  { day: "Saturday", time: "8:00 AM – 11:00 PM" },
+  { day: "Monday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
+  { day: "Tuesday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
+  { day: "Wednesday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Thursday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Friday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Saturday",time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
   { day: "Sunday", time: "Closed" },
 ];
 
