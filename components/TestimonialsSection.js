@@ -3,22 +3,34 @@ import '../styles/home.css';
 
 const testimonials = [
   {
-    text: "The Power Gym completely transformed my approach to fitness. The coaches are phenomenal and the facility is unlike anything I've experienced. Three years in and I'm still seeing results.",
-    name: 'David Chen',
-    detail: 'Apex Member · 3 Years',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+    text: "Joining The Power Gym was the best decision for my fitness. The trainers guide you properly, the environment is very motivating, and the equipment is top quality. After two years here, I feel stronger and healthier than ever.",
+    name: 'Rahul Maan',
+    detail: 'Regular Member · 1 Year',
+    avatar: '/clients/img5.png',
   },
   {
-    text: "As a competitive athlete, I need elite-level training. The Power Gym delivered on every front — the programming, the recovery facilities, and the coaching have all taken my performance to new heights.",
-    name: 'Priya Sharma',
-    detail: 'Elite Member · 18 Months',
-    avatar: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80',
+    text: "As someone who trains seriously, I needed a gym with proper equipment and experienced trainers. The Power Gym has everything — great machines, disciplined training environment, and excellent support from the coaches.",
+    name: 'Vinay Joshi',
+    detail: 'Advanced Member · 3 Years',
+    avatar: '/clients/img2.jpeg',
   },
   {
-    text: "I was skeptical about the price point, but The Power Gym is absolutely worth every penny. The atmosphere pushes you to perform, the coaches genuinely care, and the results speak for themselves.",
-    name: 'Michael Torres',
-    detail: 'Elite Member · 2 Years',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+    text: "At first I thought the membership might be expensive, but after training here I realised it's completely worth it. The trainers are supportive, the gym is always clean, and the atmosphere keeps you motivated to improve.",
+    name: 'Ashish Barua',
+    detail: 'Premium Member · 5 Years',
+    avatar: '/clients/img4.png',
+  },
+  {
+    text: "The Power Gym has helped me stay consistent with my workouts. The trainers give proper guidance and the overall vibe of the gym pushes you to work harder every day.",
+    name: 'Neeraj Rathor',
+    detail: 'Premium Member · 5 Years',
+    avatar: '/clients/img6.png',
+  },
+  {
+    text: "I joined to improve my fitness and stamina, and the results have been amazing. The trainers are friendly, the equipment is modern, and the energy in the gym keeps you motivated to train regularly.",
+    name: 'Javed Ali',
+    detail: 'Advanced Member · 3 Years',
+    avatar: '/clients/img7.png',
   },
 ];
 

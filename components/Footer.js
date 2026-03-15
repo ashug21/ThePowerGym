@@ -34,6 +34,11 @@ export default function Footer() {
                   label: "Whatsapp",
                   link: "https://wa.me/9990586994",
                 },
+                {
+                  icon: "/socialApps/facebook.png",
+                  label: "Facebook",
+                  link: "https://www.facebook.com/sandeep.joshi.16547008?mibextid=wwXIfr&rdid=NyNoWOD0gy1YWzNa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15wHuJpjEm%2F%3Fmibextid%3DwwXIfr",
+                },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -76,7 +81,7 @@ export default function Footer() {
                 "Group Classes",
                 "Strength & Conditioning",
                 "Nutrition Coaching",
-                "Workout Guidance"
+                "Workout Guidance",
               ].map((p) => (
                 <li key={p}>
                   <a href="#">{p}</a>
@@ -89,25 +94,45 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Contact</div>
             <div className="footer-contact-item">
-              <div className="footer-contact-icon">📍</div>
+              <img
+                src="/socialApps/location.png"
+                alt="Location"
+                className="footer-contact-icon"
+              />
               <div className="footer-contact-text">
-              Sandeep Fitness Gym, 1675 E/2, Govindpuri Extension, Kalkaji, New Delhi, Delhi 110019
+                Sandeep Fitness Gym, 1675 E/2, Govindpuri Extension, Kalkaji,
+                New Delhi, Delhi 110019
                 <br />
-
               </div>
             </div>
             <div className="footer-contact-item">
-              <div className="footer-contact-icon">📞</div>
+              <img
+                src="/socialApps/telephone.png"
+                alt="Phone"
+                className="footer-contact-icon"
+              />
               <div className="footer-contact-text">+91 9990586994</div>
             </div>
+
             <div className="footer-contact-item">
-              <div className="footer-contact-icon">✉</div>
-              <div className="footer-contact-text">ashmeetsinghkalsi.dev@gmail.com</div>
-            </div>
-            <div className="footer-contact-item">
-              <div className="footer-contact-icon">🕐</div>
+              <img
+                src="/socialApps/gmail.png"
+                alt="gmail"
+                className="footer-contact-icon"
+              />
               <div className="footer-contact-text">
-                Mon–Sat: 8AM – 11PM
+                ashmeetsinghkalsi.dev@gmail.com
+              </div>
+            </div>
+
+            <div className="footer-contact-item">
+              <img
+                src="/socialApps/clock.png"
+                alt="Opening Hours"
+                className="footer-contact-icon"
+              />
+              <div className="footer-contact-text">
+                Mon–Sat: ( 7:00 AM – 10:00 AM ) & ( 5:00 PM - 11:00 PM )
                 <br />
                 Sun: Closed
               </div>

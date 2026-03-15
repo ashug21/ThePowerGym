@@ -23,7 +23,7 @@ export default function CtaStrip() {
             </h2>
             <p className="cta-strip-subtitle">
               Stop waiting for the perfect moment. The perfect moment is now. 
-              Begin your IRONFORGE journey today.
+              Begin your The Power Gym journey today.
             </p>
           </div>
           <div className="cta-strip-actions">
