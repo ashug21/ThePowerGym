@@ -5,11 +5,13 @@ import Navbar from "../../../components/AdminNavbar";
 import { useRouter } from "next/navigation";
 import styles from "./dashboard.module.css";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 const Dashboard = () => {
 
   const [enquiry, setEnquiry] = useState([]);
   const [contact, setContact] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const router = useRouter();
 
@@ -36,50 +38,92 @@ const Dashboard = () => {
 
   const deleteUserEnquiry = async (id) => {
     if (!confirm("Are you sure you want to delete this Enquiry ?")) return;
-
+  
+    const toastId = toast.loading("Deleting enquiry...");
+  
     try {
       const res = await fetch(`/api/enquiry/${id}`, {
         method: "DELETE",
       });
-
+  
       if (!res.ok) {
-        console.log("Failed to delete enquiry");
+        toast.update(toastId, {
+          render: "Failed to delete enquiry",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
         return;
       }
-
-      alert("enquiry deleted successfully");
+  
+      toast.update(toastId, {
+        render: "Enquiry deleted successfully",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+      });
+  
       getEnquiries();
     } catch (error) {
+      toast.update(toastId, {
+        render: "Something went wrong",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
       console.log(error);
     }
   };
 
 
-
   const deleteUserContactInfo = async (id) => {
     if (!confirm("Are you sure you want to delete this Contact info ?")) return;
-
+  
+    const toastId = toast.loading("Deleting contact...");
+  
     try {
       const res = await fetch(`/api/contact/${id}`, {
         method: "DELETE",
       });
-
+  
       if (!res.ok) {
-        console.log("Failed to delete Contact Info");
+        toast.update(toastId, {
+          render: "Failed to delete Contact Info",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
         return;
       }
-
-      alert("Contact deleted successfully");
+  
+      toast.update(toastId, {
+        render: "Contact deleted successfully",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+      });
+  
       getContactDetails();
     } catch (error) {
+      toast.update(toastId, {
+        render: "Something went wrong",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
       console.log(error);
     }
   };
 
 
   useEffect(() => {
-    getEnquiries();
-    getContactDetails();
+    const loadData = async () => {
+      setLoading(true);
+      await Promise.all([getEnquiries(), getContactDetails()]);
+      setLoading(false);
+    };
+  
+    loadData();
   }, []);
 
   useEffect(() => {
@@ -90,6 +134,19 @@ const Dashboard = () => {
       router.push("/");
     }
   }, [router]);
+
+  if (loading) {
+    return (
+      <div>
+         <Navbar />
+<div className={styles.loadingWrapper}>
+        <h2 className={styles.loadingText}>Loading...</h2>
+      </div>
+      </div>
+      
+    );
+  }
+
 
   return (
     <div>
@@ -153,7 +210,7 @@ const Dashboard = () => {
            <p><strong>Name:</strong> {item.fullname}</p>
            <p><strong>Email:</strong> {item.email}</p>
            <p><strong>Phone:</strong> {item.phone}</p>
-           <p><strong>Goal:</strong> {item.primarygoal}</p>
+           <p><strong>Subject:</strong> {item.subject}</p>
            <p><strong>Message:</strong> {item.message}</p>
          </div>
        

@@ -1,4 +1,7 @@
 import '../styles/globals.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export const metadata = {
   title: 'The Power Gym - Sandeep Joshi',
@@ -30,7 +33,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ToastContainer position="top-right" autoClose={3000} />
+      </body>
     </html>
   );
 }

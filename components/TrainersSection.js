@@ -76,6 +76,10 @@ export default function TrainersSection() {
                         icon: "/socialApps/youtube.png",
                         link: "https://www.youtube.com/@SandeepJoshi99",
                       },
+                      {
+                        icon: "/socialApps/facebook.png",
+                        link: "https://www.facebook.com/sandeep.joshi.16547008?mibextid=wwXIfr&rdid=NyNoWOD0gy1YWzNa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15wHuJpjEm%2F%3Fmibextid%3DwwXIfr",
+                      },
                     ].map((social, index) => (
                       <a
                         key={index}

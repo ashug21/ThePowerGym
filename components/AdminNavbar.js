@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import '../styles/navbar.css';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "../styles/navbar.css";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/gallery', label: 'Gallery' },
-
+  { href: "/", label: "Home" },
+  { href: "/gallery", label: "Gallery" },
 ];
 
 export default function Navbar() {
@@ -19,8 +19,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -28,24 +28,28 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
-   const router = useRouter();
+  const router = useRouter();
 
-
-  const logout = async() => {
+  const logout = async () => {
     localStorage.removeItem("Admin");
+    toast.success("Logged Out Successfully !");
     router.push("/");
-}
+  };
 
   return (
     <>
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-inner">
           <Link href="/" className="nav-logo">
-            <div className="nav-logo-text">The Power<span>Gym</span></div>
+            <div className="nav-logo-text">
+              The Power<span>Gym</span>
+            </div>
             <div className="nav-logo-sub">Elite Fitness</div>
           </Link>
 
@@ -54,7 +58,9 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`nav-link ${pathname === link.href ? 'active' : ''}`}
+                  className={`nav-link ${
+                    pathname === link.href ? "active" : ""
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -62,10 +68,12 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button onClick={logout} className="nav-cta">Logout</button>
+          <button onClick={logout} className="nav-cta">
+            Logout
+          </button>
 
           <button
-            className={`hamburger ${menuOpen ? 'open' : ''}`}
+            className={`hamburger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -77,7 +85,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile menu */}
-      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <ul className="mobile-nav-links">
           {navLinks.map((link) => (
             <li key={link.href}>
@@ -87,9 +95,15 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        <button onClick={logout} className="nav-cta mobile-logout">
+          Logout
+        </button>
+
         <Link href="/enquiry" className="btn-primary">
           <span>Start Your Journey</span>
         </Link>
+
         <div className="mobile-menu-footer">
           The Power Gym © 2026 — Premium Fitness
         </div>

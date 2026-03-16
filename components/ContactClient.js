@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import "../styles/forms.css";
+import { toast } from "react-toastify";
 
 const hours = [
-  { day: "Monday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
-  { day: "Tuesday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
-  { day: "Wednesday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
-  { day: "Thursday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
-  { day: "Friday", time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
-  { day: "Saturday",time: "( 7:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
+  { day: "Monday", time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
+  { day: "Tuesday", time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
+  { day: "Wednesday", time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Thursday", time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Friday", time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) "  },
+  { day: "Saturday",time: "( 6:00 AM – 10:00 AM ) &  ( 5:00 PM - 11:00 PM ) " },
   { day: "Sunday", time: "Closed" },
 ];
 
@@ -22,11 +23,12 @@ export default function ContactClient() {
   const [subject , setSubject] = useState("");
   const [message , setMessage] = useState("");
 
-  const handleContact = async(e) => {
+  const handleContact = async (e) => {
     e.preventDefault();
-
+  
+    const toastId = toast.loading("Sending message...");
+  
     try {
-
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -44,12 +46,21 @@ export default function ContactClient() {
       const data = await res.json();
   
       if (!res.ok) {
-        console.log("Error adding task");
+        toast.update(toastId, {
+          render: "Error submitting form",
+          type: "error",
+          isLoading: false,
+          autoClose: 3000,
+        });
         return;
       }
   
-      alert("Contact form sent successfully");
-  
+      toast.update(toastId, {
+        render: "Contact form sent successfully",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+      });
   
       setFullName("");
       setEmail("");
@@ -57,11 +68,16 @@ export default function ContactClient() {
       setSubject("");
       setMessage("");
   
-      
     } catch (error) {
+      toast.update(toastId, {
+        render: "Something went wrong",
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
       console.log(error);
     }
-  }
+  };
 
 
   return (

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import styles from './adminAuth.module.css'
 import { useRouter } from 'next/navigation'
+import { toast } from "react-toastify";
 
 const AdminAuth = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,14 +21,14 @@ const AdminAuth = () => {
     if(username === "Sandeep" && password === "Sandeep"){
 
         localStorage.setItem("Admin","true");
+        toast.success("Admin Authenticated");
         router.replace("/admin/dashboard");
+        
     }
     else{
-        alert("Wrong Password or Username");
+        toast.error("Wrong Password or Username");
         router.replace("/");
     }
-    
-
   }
 
   return (
