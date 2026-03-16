@@ -104,7 +104,7 @@ export default function ContactClient() {
                 {
                   icon: "✉",
                   label: "Email",
-                  value: "ashmeetsinghkalsi.dev@gmail.com",
+                  value: "sandeepjoshi786687@gmail.com",
                   sub: "Response within 24 hours",
                 },
               ].map((item) => (

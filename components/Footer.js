@@ -121,7 +121,7 @@ export default function Footer() {
                 className="footer-contact-icon"
               />
               <div className="footer-contact-text">
-                ashmeetsinghkalsi.dev@gmail.com
+                sandeepjoshi786687@gmail.com
               </div>
             </div>
 
