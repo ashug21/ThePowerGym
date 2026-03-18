@@ -24,6 +24,9 @@ export const metadata = {
   Sandeep Fitness gym , 
   Sandeep gym in govindpuri
   `,
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
