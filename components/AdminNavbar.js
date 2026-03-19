@@ -9,8 +9,8 @@ import { toast } from "react-toastify";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
 ];
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -97,8 +97,8 @@ export default function Navbar() {
         </ul>
 
         <button onClick={logout} className="nav-cta mobile-logout">
-          Logout
-        </button>
+  Logout
+</button>
 
         <Link href="/enquiry" className="btn-primary">
           <span>Start Your Journey</span>

@@ -26,6 +26,16 @@ export default function ContactClient() {
   const handleContact = async (e) => {
     e.preventDefault();
   
+    if (!fullname || !email || !phone || !subject || !message) {
+      toast.error("All Fields are required !");
+      return;
+    }
+
+    if(phone.length != 10){
+      toast.error("Enter a Valid Phone Number");
+      return;
+    }
+  
     const toastId = toast.loading("Sending message...");
   
     try {
@@ -253,7 +263,7 @@ export default function ContactClient() {
                   className="form-input"
                   type="tel"
                   name="phone"
-                  placeholder="+91 9876543210"
+                  placeholder="9990586994"
                   required
                 />
               </div>

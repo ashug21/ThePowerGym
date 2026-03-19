@@ -12,8 +12,20 @@ export default function EnquiryClient() {
   const [primarygoal, setPrimaryGoal] = useState("");
   const [message, setMessage] = useState("");
 
+
+
   const handleEnquiry = async (e) => {
     e.preventDefault();
+  
+    if (!fullname || !email || !phone || !primarygoal || !message) {
+      toast.error("All Fields are required !");
+      return;
+    }
+
+    if(phone.length != 10){
+      toast.error("Enter a Valid Phone Number");
+      return;
+    }
   
     const toastId = toast.loading("Sending enquiry...");
   
@@ -66,6 +78,8 @@ export default function EnquiryClient() {
       console.log(error);
     }
   };
+
+
 
   return (
     <div>
@@ -146,7 +160,7 @@ export default function EnquiryClient() {
                       className="form-input"
                       type="tel"
                       name="phone"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="9990586994"
                     />
                   </div>
                 </div>
