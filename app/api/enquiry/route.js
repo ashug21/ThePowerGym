@@ -18,6 +18,13 @@ export async function POST(req) {
       [fullname, email, phone, primarygoal, message]
     );
 
+
+    await pool.query(
+      `Insert into enquiryBackup (fullname , email , phone , primarygoal , message)
+            Values ($1, $2 , $3 , $4 , $5)`,
+      [fullname, email, phone, primarygoal, message]
+    );
+
     return NextResponse.json(
       { message: "Enquiry sent successfully" },
       { status: 201 }

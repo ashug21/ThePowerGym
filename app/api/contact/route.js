@@ -18,6 +18,12 @@ export async function POST(req) {
       [fullname, email, phone, subject, message]
     );
 
+    await pool.query(
+      `Insert into contactBackup (fullname , email , phone , subject , message)
+            Values ($1, $2 , $3 , $4 , $5)`,
+      [fullname, email, phone, subject, message]
+    );
+
     return NextResponse.json(
       { message: "Contact form sent successfully" },
       { status: 201 }
