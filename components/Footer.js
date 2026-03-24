@@ -132,7 +132,7 @@ export default function Footer() {
                 className="footer-contact-icon"
               />
               <div className="footer-contact-text">
-                Mon–Sat: ( 7:00 AM – 10:00 AM ) & ( 5:00 PM - 11:00 PM )
+                Mon–Sat: ( 6:00 AM – 10:00 AM ) & ( 5:00 PM - 11:00 PM )
                 <br />
                 Sun: Closed
               </div>
@@ -147,7 +147,6 @@ export default function Footer() {
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
           </div>
         </div>
       </div>
