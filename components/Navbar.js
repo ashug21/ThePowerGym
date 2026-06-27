@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import '../styles/navbar.css';
 
-cscscsns
-
 
 const navLinks = [
   { href: '/', label: 'Home' },
